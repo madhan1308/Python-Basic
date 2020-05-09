@@ -1,0 +1,973 @@
+#------------------------------------------------------------------------
+# Manual: Learn Python in 3 hour [Last Updated: March 9 2018]
+#------------------------------------------------------------------------
+
+# 2. Python Version Used: 3.x
+#
+# 3. How to use:
+# 	* There are 16 PROGRAMs to clear the various concepts
+# 	* Just copy the progrm and run it by 
+# 	* $python <filename.py>
+#------------------------------------------------------------------------
+
+
+#########################################################################
+#							PART - I									#
+#						Basics of Python								#
+#-----------------------------------------------------------------------#
+# 1. Syntex	2.Loop 	3. if-else	4. Data Structures	5. Strings			#
+# 5. File Handaling	6. Exception Handaling	7. Random Numbers			#
+# 8. Use of Libraries													#
+#########################################################################
+
+
+
+#########################################################################
+# PROGRAM 1: Hello World
+# LEARNING : How to print and run python program
+#########################################################################
+
+print ("Hello World")
+
+# Assingment 1.1: WAP to print your name two times
+
+
+
+#########################################################################
+# PROGRAM 2: Add numbers and Concatinate strings
+# LEARNING : How to delclare variable, add and print result
+#########################################################################
+
+
+#------------------------------------------------------------------------
+# Example 2.1: Add two numbers
+#------------------------------------------------------------------------
+a = 10				
+b = 220
+c = a + b       # Add two numbers
+print (a, " + ", b, " --> ", c)
+
+#------------------------------------------------------------------------
+# Example 2.2: Concatinate two strings
+#------------------------------------------------------------------------
+a = "Bhagat"
+b = " Singh"
+c = a + b		# Concatinate two strings
+print (a, " + ", b, " --> ", c)
+
+
+# Assingment 2.1: WAP to add three numbers and print result
+# Assingment 2.2: WAP to concatinate three strings and print result
+
+
+
+#########################################################################
+# PROGRAM 3: Input from user
+# LEARNING : How to take input from user
+# NOTE     : input() function is used to take integer as input.
+#########################################################################
+
+
+#------------------------------------------------------------------------
+# Example 3.1: Input two numbers from user and add them
+#------------------------------------------------------------------------
+a = int(input("Enter First No: "))
+b = int(input("Enter Second No: "))
+c = a + b
+print (a, " + ", b, " --> ", c)
+
+
+#------------------------------------------------------------------------
+# Example 3.2: Input two strings from user and concatinate them
+#------------------------------------------------------------------------
+a = input("Enter First String: ")
+b = input("Enter Second String: ")
+c = a + b		# concatinate two strings
+print  (a, " + ", b, " --> ", c)
+
+
+# Assingment 3.1: WAP to add three numbers, inputs from user and print result
+# Try: In above program, give number in place of string and try to get the difference between input() and raw_input() function.
+
+# Assingment 3.2: WAP to concatinate three strings, inputs from user and print
+
+
+#########################################################################
+# PROGRAM 4: Loops
+# LEARNING : Loop, increment, decrement
+#########################################################################
+
+
+#------------------------------------------------------------------------
+# Example 4.1: While Loop
+#------------------------------------------------------------------------
+i=1
+while i <= 10:
+	print (i)
+	i=i+1
+
+
+
+#------------------------------------------------------------------------
+# Example 4.2: Range Function
+#------------------------------------------------------------------------
+print ("range(10) --> ", list(range(10)))
+print ("range(0,20) --> ", list(range(0,20)))
+print ("range(10,20) --> ", list(range(10,20)))
+print ("range(0,20,2) --> ", list(range(0,20,2)))
+print ("range(-10,-20,2) --> ", list(range(-10,-20,2)))
+print ("range(-10,-20,-2) --> ", list(range(-10,-20,-2)))
+
+#------------------------------------------------------------------------
+# Example 4.3: For loop
+#------------------------------------------------------------------------
+for i in range(0,10):
+	print (i)
+
+
+#------------------------------------------------------------------------
+# Example 4.4: For loop
+#------------------------------------------------------------------------
+for i in range(0,20,2):
+	print (i)
+
+
+#------------------------------------------------------------------------
+# Example 4.5: For loop
+#------------------------------------------------------------------------
+for i in range(0,-10,-1):
+	print (i)
+
+
+#------------------------------------------------------------------------
+# Example 4.6: Print table of 5
+#------------------------------------------------------------------------
+for i in range(1,11):
+	print (5," * ", i , " = ", i * 5)
+
+
+#------------------------------------------------------------------------
+# Example 4.7: Sum all numbers from 1 to 10
+#------------------------------------------------------------------------
+s=0
+for i in range(1,11):
+	s=s+i
+print ("Sum is --> ",s)
+
+
+#------------------------------------------------------------------------
+# Example 4.8: Sum all numbers from 1 to 10
+#------------------------------------------------------------------------
+print ("Sum is --> ", sum(range(1,11)))
+
+
+
+# Assingment 4.1: WAP to print the table of 7, 9.
+# Assingment 4.2: WAP to print the table of n and n is given by user.
+# Assingment 4.3: WAP to add all the numbers from 1 to n and n is given by user.
+
+
+
+#########################################################################
+# PROGRAM 5: If-Else - Conditional Checking
+# LEARNING : if-else Condition
+#########################################################################
+
+
+#------------------------------------------------------------------------
+# Example 5.1: Input two numbers from user and compare them
+#------------------------------------------------------------------------
+a = int(input("Enter First No: "))
+b = int(input("Enter Second No: "))
+if  a > b: 
+	print (a," > ",b)
+else:
+	print (a," < ",b)
+
+
+#------------------------------------------------------------------------	
+# Example 5.2: Check weather a number is odd or even:
+#------------------------------------------------------------------------
+n = int(input("Enter a No: "))
+if  n % 2 == 0: 
+	print (n," is even")
+else:
+	print (n," is odd")
+
+	
+#------------------------------------------------------------------------
+# Example 5.3: Check weather a number is prime of not:
+#------------------------------------------------------------------------
+n = int(input("Enter a No: "))
+f=0
+for i in range(2, int(n/2) + 1):
+	if  n % i == 0: 
+		f=1
+		break
+
+if f==0:
+	print ("Prime")
+else:
+	print ("Not Prime")
+
+	
+#------------------------------------------------------------------------
+# Example 5.4: Conditional Checking - Compare strings
+#------------------------------------------------------------------------
+a = input("Enter First String: ")
+b = input("Enter Second String: ")
+
+if a == b: 
+	print ("a == b")
+elif a >= b: 
+	print ("a > b")
+else:
+	print ("a < b")
+
+
+
+# Assingment 5.1: WAP to find max amoung three numbers and input from user
+# Try max() function
+
+# Assingment 5.2: WAP to add all even numbers from 1 to n and n is given by user.
+# Assingment 5.3: WAP to add all prime numbers from 1 to n and n is given by user.
+
+
+
+
+#########################################################################
+# PROGRAM 6: Functions
+# LEARNING : How to declare and call
+#########################################################################
+
+#------------------------------------------------------------------------
+# Example 6.1: Add two numbers
+#------------------------------------------------------------------------
+def Add(a,b):
+	c=a+b
+	return c
+
+print ("Add(10,20) -->", Add(10,20))
+print ("Add(20,50) -->", Add(20,50)) 
+print ("Add(80,200) -->", Add(80,200)) 
+
+
+
+#------------------------------------------------------------------------
+# Example 6.2: Prime number
+#------------------------------------------------------------------------
+def IsPrime(n):
+	for i in range(2,int(n/2)+1):
+		if n%i==0:
+			return 0
+	return 1
+
+print ("IsPrime(20) --> ", IsPrime(20))
+print ("IsPrime(23) --> ", IsPrime(23))
+print ("IsPrime(200) --> ", IsPrime(200))
+print ("IsPrime(37) --> ", IsPrime(37))
+	
+
+	
+#------------------------------------------------------------------------
+# Example 6.3: Add 1 to n
+#------------------------------------------------------------------------
+def AddN(n):
+	s= sum(range(n+1))
+	return s
+
+print ("AddN(10) --> ", AddN(10))
+print ("AddN(20) --> ", AddN(20))
+print ("AddN(50) --> ", AddN(50))
+print ("AddN(200) --> ", AddN(200))
+
+
+
+# Assingment 6.1: WAP using function that add all odd numbers from 1 to n; n given by user.
+# Assingment 6.2: WAP using function that add all even numbers from 1 to n; n given by user.
+# Assingment 6.3: WAP using function that add all prime numbers from 1 to n; n given by user.
+
+	
+	
+#########################################################################
+# PROGRAM 7: Math library
+# LEARNING : Use math library
+#########################################################################
+
+import math as m
+print ("exp(-200)    --> ", m.exp(-200))  # Exponential function
+print ("log(100,2)   --> ", m.log(100,2)) # Log
+print ("log(100,10)  --> ", m.log(100,10))# Log
+print ("log10(100)   --> ", m.log10(100)) # Log 10
+print ("m.cos(30)    --> ", m.cos(30))    # cos
+print ("m.sin(30)    --> ", m.sin(30))    # sin
+print ("m.tan(30)    --> ", m.tan(30))    # tan
+print ("m.sqrt(324)  --> ", m.sqrt(324))
+print ("m.ceil(89.9) --> ", m.ceil(89.9))
+print ("m.floor(89.9)--> ", m.floor(89.9))
+
+
+
+
+#########################################################################
+# PROGRAM 8: Strings
+# LEARNING : How to handle string
+#########################################################################
+
+#------------------------------------------------------------------------
+# Example 8.1: Indexing in string
+#------------------------------------------------------------------------
+var1 = 'Hello World!'
+var2 = "Python Programming"
+print ("var1 --> ", var1)
+print ("var2 --> ",var2)
+print ("var1[0] --> ", var1[0])
+print ("var2[1:5] --> ", var2[1:5])
+print ("var2[:-5] --> ", var2[:-5])
+
+
+#------------------------------------------------------------------------
+# Example 8.2: String length, upper, lower
+#------------------------------------------------------------------------
+var1 = 'Hello World!'
+var2 = "Python Programming"
+
+print ("var1 --> ", var1)
+print ("var2 --> ",var2)
+
+print ("\nlength of var1 --> : ", len(var1))
+print ("length of var2 --> : ", len(var2))
+
+print ("\nUpper of var1 --> : ", var1.upper())
+print ("Upper of var2 --> : ", var2.upper())
+
+print ("\nLower of var1 --> : ", var1.lower())
+print ("Lower of var2 --> : ", var2.lower())
+
+
+#------------------------------------------------------------------------
+# Example 8.3: String formatting
+#------------------------------------------------------------------------
+name=input("Enter your name: ")
+age=int(input("Enter your age: "))
+price=float(input("Enter the book price: "))
+s="Your name is %s, age is %d and book price is %f" %(name.upper(),age,price)
+print (s)
+
+
+
+#------------------------------------------------------------------------
+# Example 8.4: String in Triple Quotes
+#------------------------------------------------------------------------
+para_str = """This is a long string that is made up of
+several lines and non-printable characters such as
+TAB ( \t ) and they will show up that way when displayed.
+NEWLINEs within the string, whether explicitly given like
+this within the brackets [ \n ], or just a NEWLINE within
+the variable assignment will also show up.
+"""
+print (para_str)
+
+
+
+#------------------------------------------------------------------------
+# Example 8.5: String strip
+#------------------------------------------------------------------------
+s1=" Indian Army    "
+s2=" Indian     Army    "
+s3="Indian, Army"
+
+print ("s1 --> ", s1, "\t Length --> ", len(s1))
+print ("s1 strip --> ", s1.strip(), "\t Length --> ", len(s1.strip()))
+
+print ("\ns2 --> ", s2, "\t Length --> ", len(s2))
+print ("s2 strip --> ", s2.strip(), "\t Length --> ", len(s2.strip()))
+
+print ("\ns3 --> ", s3, "\t Length --> ", len(s3))
+print ("s3 strip --> ", s3.strip(), "\t Length --> ", len(s3.strip()))
+
+
+
+#------------------------------------------------------------------------
+# Example 8.6: String split
+#------------------------------------------------------------------------
+s1=" Indian Army    "
+s2=" Indian     Army    "
+s3="Indian, Army"
+
+print ("s1 --> ", s1)
+print ("s1 split --> ", s1.split())
+
+print ("\ns2 --> ", s2)
+print ("s2 split --> ", s2.split())
+print ("s2 split with ' ' --> ", s2.split(' '))
+
+print ("\ns3 --> ", s3)
+print ("s3 split --> ", s3.split())
+print ("s3 split with ' ' --> ", s3.split(","))
+
+
+#------------------------------------------------------------------------
+# Example 8.7: Count in string 
+#------------------------------------------------------------------------
+s1=" Indian Army    "
+print ("s1 --> ", s1)
+print ("s1 count ' ' --> ", s1.count(' '))
+print ("s1 count 'a' --> ", s1.count('a'))
+print ("s1 count 'n' --> ", s1.count('n'))
+
+
+#------------------------------------------------------------------------
+# Example 8.8: Reverse a String
+#------------------------------------------------------------------------
+s1="Indian Army"
+print ("s1 --> ", s1)
+print ("s1[::1] --> ", s1[::1])
+print ("s1[::-1] --> ", s1[::-1])
+print ("s1[::-2] --> ", s1[::-2])
+print ("s1[::2] --> ", s1[::2])
+s1=s1[::-1]
+print ("s1 after reverse --> ", s1)
+
+
+#------------------------------------------------------------------------
+# Example 8.9: Palindrome 
+#------------------------------------------------------------------------
+s1="Indian Army"
+s2="malayalam"
+s3="madam"
+s4="teacher"
+print ("s1 --> ", s1==s1[::-1])
+print ("s2 --> ", s2==s2[::-1])
+print ("s3 --> ", s3==s3[::-1])
+print ("s4 --> ", s4==s4[::-1])
+
+
+
+	
+#########################################################################
+# PROGRAM 9: Exceptional Handaling
+# LEARNING : How to handle Exceptionals
+#########################################################################
+
+
+#------------------------------------------------------------------------
+# Example 9.1: Error Generation
+#------------------------------------------------------------------------
+for i in range(-5,6):
+	print ("100/",i," --> ", 100/i)
+
+
+#------------------------------------------------------------------------
+# Example 9.2: Exception handaling for division by zero
+#------------------------------------------------------------------------
+for i in range(-5,6):
+	try:
+		print ("100/",i," --> ", 100/i)
+	except:
+		print ("error")
+
+
+#------------------------------------------------------------------------
+# Example 9.3: Exception handaling for array out of index
+#------------------------------------------------------------------------
+L=[1,2,3,4,5]
+
+for i in range(8):
+	try:
+		print (i," --> ",L[i])
+	except:
+		print ("error")
+
+
+#------------------------------------------------------------------------
+# Example 9.4: Exception handaling for file not found
+#------------------------------------------------------------------------
+fileName=input("Enter File Name: ")
+fp=open(fileName)	# Open the file in reading mode
+fp.close()
+print ("Done")
+
+
+#------------------------------------------------------------------------
+# Example 9.5: Exception handaling for file not found
+#------------------------------------------------------------------------
+fileName=input("Enter File Name: ")
+try:
+	fp=open(fileName)	# Open the file in reading mode
+	fp.close()
+except:
+	print ("Error !! File Not Found")
+
+print ("Done")
+
+
+
+
+#########################################################################
+# PROGRAM 10: Random Numbers/String
+# LEARNING : Generate Random Numbers/String
+#########################################################################
+
+
+#------------------------------------------------------------------------
+# Example 10.1: Generate random number between 0 and 1
+#------------------------------------------------------------------------
+import random as r
+print (r.random())
+print (r.random())
+print (r.random())
+
+
+#------------------------------------------------------------------------
+# Example 10.2: Generate random integer number
+#------------------------------------------------------------------------
+import random as r
+print (r.randint(1, 100))
+print (r.randint(1, 100))
+print (r.randint(1, 100))
+print (r.randint(-10, 10))
+print (r.randint(-10, 10))
+print (r.randint(-10, 10))
+
+
+#------------------------------------------------------------------------
+# Example 10.3: Generate random real number
+#------------------------------------------------------------------------
+import random as r
+print (r.uniform(1, 100))
+print (r.uniform(1, 100))
+print (r.uniform(1, 100))
+print (r.uniform (-10, 10))
+print (r.uniform (-10, 10))
+print (r.uniform (-10, 10))
+
+
+#------------------------------------------------------------------------
+# Example 10.4: Generate sample from a list of elements
+#------------------------------------------------------------------------
+import random as r
+A=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print (r.sample(A, 4))
+print (r.sample(A, 2))
+print (r.sample(range(1,90), 2))
+print (r.sample(range(1,90), 5))
+
+
+
+#------------------------------------------------------------------------
+# Example 10.5: Generate random string
+#------------------------------------------------------------------------
+import string as s
+import random as r
+print ("String --> ",s.ascii_letters)
+
+passwd=r.sample(s.ascii_letters, 5)
+passwd="".join(passwd)
+print ("passwd 1 --> ",passwd)
+
+passwd=r.sample(s.ascii_letters, 6)
+passwd="".join(passwd)
+print ("passwd 2 --> ",passwd)
+
+passwd=r.sample(s.ascii_letters, 8)
+passwd="".join(passwd)
+print ("passwd 3 --> ",passwd)
+
+
+
+#------------------------------------------------------------------------
+# Example 10.6: Generate random digits
+#------------------------------------------------------------------------
+import string as s
+import random as r
+print ("Digits --> ",s.digits)
+
+otp=r.sample(s.digits, 5)
+otp="".join(otp)
+print ("otp 1 --> ",otp)
+
+otp=r.sample(s.digits, 5)
+otp="".join(otp)
+print ("otp 2 --> ",otp)
+
+otp=r.sample(s.digits, 5)
+otp="".join(otp)
+print ("otp 3 --> ",otp)
+
+
+#------------------------------------------------------------------------
+# Example 10.7: Generate random string + digits
+#------------------------------------------------------------------------
+import string as s
+import random as r
+print ("String + Digits--> ",s.ascii_letters + s.digits)
+
+mixPasswd=r.sample(s.ascii_letters + s.digits, 8)
+mixPasswd="".join(mixPasswd)
+print ("mixPasswd 1 --> ",mixPasswd)
+
+mixPasswd=r.sample(s.ascii_letters + s.digits, 10)
+mixPasswd="".join(mixPasswd)
+print ("mixPasswd 2 --> ",mixPasswd)
+
+mixPasswd=r.sample(s.ascii_letters + s.digits, 12)
+mixPasswd="".join(mixPasswd)
+print ("mixPasswd 3 --> ",mixPasswd)
+
+
+
+
+#########################################################################
+# PROGRAM 11: Demo of Data Structure - List
+# LEARNING : How to use list, add, delete, search in list
+#            List indexing starts from 0 to n-1
+# NOTE     : Read more about list and try yourself
+#########################################################################
+
+
+#------------------------------------------------------------------------
+# Example 11.1: List Decleration
+#------------------------------------------------------------------------
+L = ["Pratham",  'Sharma', 3.14,  3 ]
+print ("Original List: ", L)
+print ("Number of elements in list: ", len(L))
+
+
+#------------------------------------------------------------------------
+# Example 11.2: List Iteration
+#------------------------------------------------------------------------
+L = ["Pratham",  'Sharma', 3.14,  3 ]
+print ("Original List: ", L)
+i=0
+while i < len(L): 
+	print (L[i])
+	i+=1
+
+
+#------------------------------------------------------------------------
+# Example 11.3: List Iteration using for loop
+#------------------------------------------------------------------------
+L = ["Pratham",  'Sharma', 3.14,  3 ]
+print ("Original List: ", L)
+for i in range(0, len(L)):
+	print (L[i])
+
+
+#------------------------------------------------------------------------
+# Example 11.4: List Iteration using for loop
+#------------------------------------------------------------------------
+L = ["Pratham",  'Sharma', 3.14,  3 ]
+print ("Original List --> ", L)
+for s in L:
+	print (s)
+
+
+#------------------------------------------------------------------------
+# Example 11.5 : Adding and deleting from list
+#------------------------------------------------------------------------
+L = ["Pratham",  'Sharma', 3.14,  3 ]
+print ("Original List --> ", L)
+L.append("Rahul")
+print ("List After Adding --> ", L)
+del L[1]
+print ("List After Deleting --> ", L)
+
+
+#------------------------------------------------------------------------
+# Example 11.6 : Sum/Average of List
+#------------------------------------------------------------------------
+L=[3, 6, 9, 12, 5, 3, 2]
+print ("Original List --> ", L)
+print ("Sum --> ", sum(L))
+print ("Average --> ", sum(L)/len(L))
+print ("L * 3 --> ", L * 3)
+print ("L + L --> ", L + L)
+
+
+#------------------------------------------------------------------------
+# Example 11.7 : Min/Max/Sort the list
+#------------------------------------------------------------------------
+L=[3, 6, 9, 12, 5, 3, 2]
+print ("Original List --> ", L)
+print ("max --> ", max(L))
+print ("min --> ", min(L))
+print ("Before Sort --> ", L)
+L.sort()
+print ("After Sort (Asending) --> ", L)
+L.sort(reverse=True)
+print ("After Sort (Desending) --> ", L)
+
+
+#------------------------------------------------------------------------
+# Example 11.8 : Merge lists & select elements
+#------------------------------------------------------------------------
+L1 = [3, 6, 9]
+L2 = [12, 5, 3, 2]
+L3 = L1 + L2
+print ("L1 --> ",L1)
+print ("L2 --> ",L2)
+print ("L1 + L2 = L3 --> ",L3)
+print ("L3[2:] --> ",L3[2:])
+print ("L3[2:5] --> ",L3[2:5])
+print ("L3[:-1] --> ",L3[:-1])
+print ("L3[::2] --> ",L3[::2])
+
+
+#------------------------------------------------------------------------
+# Example 11.9 : Multiply all elements of list by a constant.
+#------------------------------------------------------------------------
+L = [12, 5, 3, 2, 7]
+print ("Original List --> ", L)
+newL = [ i * 5 for i in L ]
+print ("After Multiply with constant --> ", newL)
+
+
+
+
+#########################################################################
+# PROGRAM 12: Demo of Data Structure - Dictionary
+# LEARNING  : How to use Dictionary, add, delete, search in Dictionary
+# NOTE      : Read more about Dictionary and try yourself
+#########################################################################
+
+
+#------------------------------------------------------------------------
+# Example 12.1: Declare Dictionary
+#------------------------------------------------------------------------
+CGPA={1:8.9, 2:5.6, 4:6.7, 7:9.1, 8:5.3}
+print ("Dictionary --> ", CGPA)
+print ("Total dictionary contants --> ", len(CGPA))
+print ("CGPA of 1 --> ", CGPA[1])
+print ("CGPA of 4 --> ", CGPA[4])
+print ("CGPA of 7 --> ", CGPA[7])
+print ("CGPA of 3 --> ", CGPA[3])
+
+
+#------------------------------------------------------------------------
+# Example 12.2: Triverse dictionary
+#------------------------------------------------------------------------
+CGPA={1:8.9, 2:5.6, 4:6.7, 7:9.1, 8:5.3}
+for k in CGPA:
+	print ("CGPA of ", k, " --> ", CGPA[k])
+
+#------------------------------------------------------------------------
+# Example 12.3: Getting Keys and Values
+#------------------------------------------------------------------------
+CGPA={1:8.9, 2:5.6, 4:6.7, 7:9.1, 8:5.3}
+print ("Dictionary --> ", CGPA)
+print ("Keys --> ", CGPA.keys())
+print ("Values --> ", CGPA.values())
+
+
+
+#------------------------------------------------------------------------
+# Example 12.4 : Updating, Adding and Deleting from Dictionary
+#------------------------------------------------------------------------
+CGPA={1:8.9,2:5.6,4:6.7,7:9.1,8:5.3}
+print ("Original Dictionary --> ", CGPA)
+CGPA[4] = 9.2
+print ("Dictionary After Updating (4) --> ", CGPA)
+CGPA[3] = 8.6
+print ("Dictionary After Adding (3) --> ", CGPA)
+del CGPA[1]
+print ("Dictionary After Deleting (1) --> ", CGPA)
+CGPA.clear()
+print ("Dictionary after clear --> ", CGPA)
+del CGPA
+print ("Dictionary after delete --> ", CGPA)
+
+
+#------------------------------------------------------------------------
+# Example 12.5 : Checking for Key in Dictionary
+#------------------------------------------------------------------------
+CGPA={1:8.9, 2:5.6, 4:6.7, 7:9.1, 8:5.3}
+print ("Original Dictionary --> ", CGPA)
+print ("Is Key 2 Present --> ", 2 in CGPA)
+print ("Is Key 9 Present --> ", 9 in CGPA)
+
+
+
+#------------------------------------------------------------------------
+# Example 12.6
+#------------------------------------------------------------------------
+HomeTown={"Prashant":"Delhi", "Govind":"Gwalior", "Anil":"Morena", "Pankaj":"Agra"}
+print ("Original Dictionary --> ", HomeTown)
+print ("Home Town of Prashant is --> ", HomeTown["Prashant"])
+print ("Home Town of Govind is --> ", HomeTown["Govind"])
+print ("Home Town of Anil is --> ", HomeTown["Anil"])
+print ("Home Town of Pankaj is --> ", HomeTown["Pankaj"])
+
+
+
+#------------------------------------------------------------------------
+# Example 12.7
+#------------------------------------------------------------------------
+HomeTown={"Prashant":"Delhi", "Govind":"Gwalior", "Anil":"Morena", "Pankaj":"Agra"}
+print ("Original Dictionary --> ", HomeTown)
+
+for d in HomeTown:
+	print ("Home Town of ", d, " is  --> ", HomeTown[d])
+
+
+
+#########################################################################
+# PROGRAM 13: Demo of Data Structure - Touple
+# LEARNING  : How to use Touple, add, delete, search in Touple
+# NOTE      : Read more about Touple and try yourself
+#########################################################################
+
+
+
+
+
+#########################################################################
+# PROGRAM 14: Demo of Data Structure - Set
+# LEARNING  : How to use Set, add, delete, search in Set
+#########################################################################
+
+
+#------------------------------------------------------------------------
+# Example 14.1
+#------------------------------------------------------------------------
+s = set(['A', 'B', 'E', 'F','E', 'F' ])
+print ("Original set --> ", s)
+print ("Number of elements in set --> ", len(s))
+
+
+#------------------------------------------------------------------------
+# Example 14.2: Opertions on Sets
+#------------------------------------------------------------------------
+a = set(['A', 'B', 'E', 'F' ])
+b = set(["A", "C", "D", "E"])
+print ("Original set a --> ", a)
+print ("Original set b --> ", b)
+print ("Union of a and b --> ", a.union(b))
+print ("Intersection of a and b --> ", a.intersection(b))
+print ("Difference a - b --> ", a - b)
+print ("Difference a - b --> ", a.difference(b))
+print ("Difference b - a --> ", b - a)
+print ("Difference b - a --> ", b.difference(a))
+print ("Symetric Difference a - b --> ", a.symmetric_difference(b))
+print ("Symetric Difference b - a --> ", b.symmetric_difference(a))
+
+
+#------------------------------------------------------------------------
+# Example 14.3: Add, delete, pop element from set
+#------------------------------------------------------------------------
+a = set(['A', 'B', 'E', 'F' ])
+print ("Original set a --> ", a)
+a.add("D")
+print ("Set After Adding (D) --> ", a)
+a.add("D")
+print ("Set After Adding (D) --> ", a)
+a.remove("D")
+print ("Set After Deleting (D) --> ", a)
+a.pop()
+print ("Set After pop --> ", a)
+
+
+
+#########################################################################
+# PROGRAM 15: Command Line Argument
+# LEARNING  : How to Take input from command line and process it
+# NOTE      : To Run the PROGRAM - $ python Program.py 10 20
+#########################################################################
+
+
+#------------------------------------------------------------------------
+# Example 15.1: Add two numbers given at cmd line
+# NOTE      : To Run the PROGRAM - $ python Program.py 10 20
+#------------------------------------------------------------------------
+import sys
+print (sys.argv)
+a = int(sys.argv[1]) 	# First Number
+b = int(sys.argv[2])	# Second Number
+c = a + b
+print ("a, " + ", b, " --> ", c)
+
+
+#------------------------------------------------------------------------
+# Example 15.2: Concatinate two strings given at cmd line
+# NOTE      : To Run the PROGRAM - $ python Program.py Sample String
+#------------------------------------------------------------------------
+import sys
+print (sys.argv)
+s = sys.argv[1] + " " + sys.argv[2]
+print (sys.argv[1], " + ", sys.argv[2], " --> ", s)
+
+
+
+
+#------------------------------------------------------------------------
+# Example 15.3: Add all the numbers given at cmd line
+# NOTE      : To Run the PROGRAM - $ python Program.py 10 20
+#------------------------------------------------------------------------
+import sys
+print (sys.argv)
+sum=0
+for s in sys.argv[1:]:
+	sum += int(s)
+
+print ("Sum is --> ", sum)
+
+
+#------------------------------------------------------------------------
+# Example 15.4: Concatinate all strings given at cmd line
+# NOTE      : To Run the PROGRAM - $ python Program.py 10 20
+#------------------------------------------------------------------------
+import sys
+print (sys.argv)
+s=""
+for a in sys.argv[1:]:
+	s = s + a + " "
+
+print ("Concatinated Strings are --> ", s)
+
+
+
+
+
+#########################################################################
+# PROGRAM 16: File Handling 
+# LEARNING  : How to open the file, how to read line by line
+#########################################################################
+
+
+#------------------------------------------------------------------------
+# Example 16.1: Print the content of file line by line
+# NOTE      : First create a file abc.txt and write some lines
+#------------------------------------------------------------------------
+fp=open('abc.txt')		# Open the file in reading mode
+for line in fp: 		# print line by line
+	print (line)
+fp.close()
+
+
+#------------------------------------------------------------------------
+# Example 16.2: Writing 1 to 10 in file
+#------------------------------------------------------------------------
+fp=open('result.txt','w')	# Open the file in writing mode
+for  i in range(1,11):
+	fp.write(str(i) + "\n")	# Writing to the file line by line
+fp.close()
+
+print ("Writing done !! \nOpen result.txt to view the content")
+
+
+#------------------------------------------------------------------------
+# Example 16.3: Read from one file and write to other file
+#------------------------------------------------------------------------
+Readfp=open('abc.txt')		# Open the file in reading mode
+Writefp=open('result.txt','w')	# Open the file in writing mode
+for line in Readfp: 
+	Writefp.write(line)
+	
+Writefp.close()
+Readfp.close()
+
+print ("Writing done !! \nOpen result.txt to view the content")
+
+
+
+
